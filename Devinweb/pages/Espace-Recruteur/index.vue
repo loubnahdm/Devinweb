@@ -1,13 +1,13 @@
 <template>
-<div >
+<div>
+    
 <div class="container ">
     <section  class="row top-tof-profil pl-0 pr-5">
-        <div class="row">
-        <div class="div-tof col-lg-10  mt-5">
-            <div id="tof" class="img-responsive"></div>
-            <!-- <img id="tof" src="https://pbs.twimg.com/media/D1iivLUXQAAQVEm.jpg" alt="card image"/> -->
+
+        <div class="div-tof  col-lg-10  mt-5">
+            <div id="tof" ></div>
         </div>
-        </div>
+    
        <div class="row top-header-profil ">
            <div  class="col-lg-3">
                <img src="~assets/IMG/logo.jpg"   alt="card image"/>
@@ -17,13 +17,13 @@
                <div class="pl-3"><p>Agence de Développement Logiciels, Web, Mobile</p></div>
            </div>
            <div class="devin-top-icon col-lg-4 ">
-               <div>
+               <div class="mt-4">
                 <a type="button" class="btn-modif-rec btn-pen mt-3 " href="#">
                     
                     <font-awesome-icon :icon="['fas', 'pen']"/>
                   </a>
                </div>
-               <div>
+               <div class="mt-4">
                     <a type="button" class="btn-modif-rec btn-address-card  mt-5 " href="#">
                     
                     <font-awesome-icon :icon="['fas', 'address-card']"/>
@@ -32,6 +32,7 @@
                </div>
            </div>
        </div>
+     
     </section>
     <section  class="row pl-5" >
         <div class="col-lg-lg-10  devin-TB">
@@ -56,20 +57,29 @@
             <span></span>
 
         </div>
-
     </section>
     
 </div>
    
-
 </div>  
 </template>
 
 <script>
 
 export default {
-layout:'custom'
+layout:'custom',
+// data(){return{
+//     showbar:false,
+// }},
+// created(){
+// this.$bus.$on('i-got-clicked',SHW=>{
+//     console.log(`Oh, that's nice. It's gotten ${SHW} clicks! :)`);
+//     // this.showbar=show;
+//     document.getElementById()
+// });
+// }
 }
+
 </script>
 
 <style>
@@ -82,7 +92,7 @@ layout:'custom'
     background-size: 120% 140%;
     background-position-y: bottom;
     border-radius: 100px;
-    width: 1100px;
+    width: 1060px;
     height: 600px;
     z-index: -1;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
@@ -90,7 +100,22 @@ layout:'custom'
 	-webkit-box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
 
 }
+@media all and (min-width:1000px) {
+    
 
+.top-header-profil{
+    background-color: #ffffff;
+    padding-left: 110px;
+    margin-left: -110px;
+    padding-right: 170px;
+    margin-right: -180px;
+    margin-top: -200px;
+    padding-top: 200px;
+    margin-bottom: -50px;
+    padding-bottom: 50px;
+    border-top: #dbdbdb solid 1px;
+     border-bottom: #dbdbdb solid 1px;
+}}
 .top-header-profil img{
 width: 192px;
 height: 186px;

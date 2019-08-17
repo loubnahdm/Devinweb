@@ -18,6 +18,16 @@ components:{
     FooterRec ,
     Recruteur
 
+},
+mounted(){
+this.$bus.$on('i-got-clicked',SHW=>{
+    console.log(`Oh, that's nice. It's gotten ${SHW} clicks! :)`);
+    document.getElementById('main-rec').style.filter ="blur(3px)";
+});
+this.$bus.$on('i-got-delete',annuler=> {
+  document.getElementById('main-rec').style.filter ="blur(0px)";
+})
+
 }
 }
 </script>

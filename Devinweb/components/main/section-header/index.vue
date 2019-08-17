@@ -1,5 +1,5 @@
 <template>
-    <section class="container mt-5 pt-5">
+    <section class="container">
         <div class="myCarousel row ml-0 mt-5 pt-3">
           <div class="devin-img-1 d-block col-lg-4 pl-0">
              <img  class="w-full d-none d-md-block w-100" src="https://3fn8bb1aosix1ao3g33ogitp-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/Depositphotos_70098797_s-2015.jpg" alt=""/>

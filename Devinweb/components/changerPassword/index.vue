@@ -6,11 +6,11 @@
             <ul>
 					<li>
 						<label for='pass'>Votre ancien mot de passe</label><br/>
-						<input type='password' name='pass' id='mdp' class="form-control-mdp" placeholder="Current Password"/>
+						<input type='password' name='pass' class="form-control-mdp" placeholder="Current Password"/>
 					</li><br/>
 					<li>
 						<label for='NewPass'>Votre nouveau mot de passe</label><br/>
-						<input type='password' name='NewPass' id='mdp'  class="form-control-mdp" placeholder="New Password"/>
+						<input type='password' name='NewPass'  class="form-control-mdp" placeholder="New Password"/>
 					</li><br/>
 					<li>
 						<label for='NewPassVerif'>Confirmez votre nouveau mot de passe</label><br/>

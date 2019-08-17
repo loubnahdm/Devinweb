@@ -2,38 +2,40 @@
 <header>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+  <div class="container ">
+    <div class="col-lg-7">
     <div class="row">
-    <div class="navbar-header col-lg-3">
-      <nuxt-link  to="/"     class="navbar-brand"> 
+    <div class="navbar-header col-lg-3 col-md-3">
+      <nuxt-link   to="/"   class="navbar-brand"> 
                <img  src="http://d2wwknes1cy3mz.cloudfront.net/public/logo-b.png" alt="Card image">
     </nuxt-link>
     </div>
-    <form class="navbar-form  col-lg-6 navbar-right d-none d-md-block" action="/action_page.php">
+    <form class="navbar-form  col-lg-6 col-md-6 navbar-right d-none d-lg-block" action="/action_page.php">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Rechercher">
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="search">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  width="24" height="24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
+          <div class="input-group-btn ">
+            <button class="btn btn-default " type="search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mb-4" viewBox="0 0 24 24"  width="24" height="24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
         
             </button>
           </div>
         </div>
     </form>
     </div>
-   
+    </div>
+   <div class="col-lg-5">
     <ul class="nav navbar-nav row">
       <li class="active">
-              <nuxt-link class="nav-link-1" to="/">
+              <nuxt-link class="nav-link-1 " :to="{path:'/',hash:'ancre'}" >
                  <span >ESPACE CANDIDAT</span>
               </nuxt-link>  </li>     
       <li>
-              <nuxt-link class="nav-link-2" to="Login_recruteur">
+              <nuxt-link class="nav-link-2 " to="Login_recruteur">
                   <span >ESPACE RECRUTEUR</span>
               </nuxt-link>
       </li>
     </ul>
-    
+   </div>
   </div>
 </nav>
 

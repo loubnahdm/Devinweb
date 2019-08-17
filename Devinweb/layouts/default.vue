@@ -2,15 +2,19 @@
    <div>
    <Header/>
   <div class="container-fluid " id="main">
+    
     <nuxt />
+    
   </div>
   <Footer/>
    </div>
 </template>
 <script>
+
 import Header from '~/components/header-main'
 import Footer from '~/components/footer-main'
 export default {
+
   components:{
     Header,
     Footer,
@@ -39,7 +43,7 @@ html {
   text-align: center;
   /* background:  cadetblue;   */
   background: #f6f6f6;
-  /* padding-top: 60px; */
+  padding-top: 60px;
   padding-bottom: 80px;
 }
 </style>

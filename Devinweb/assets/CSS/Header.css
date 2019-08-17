@@ -1,0 +1,244 @@
+.navbar-rec{
+    /* display: block;
+  top: 0;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0); */
+ position: fixed;
+ width: 100%;
+  background:#fafafa;
+  border-bottom: 1px solid #dae1e7;
+  z-index:1;
+  
+    
+}
+.devin-logo .navbar-brand img{
+     height: auto;
+    max-width: 130px;
+    cursor: pointer;
+    display:block;
+}
+.ligne_verticale
+{
+    width:5px;
+    border-right:1px solid gray;
+    max-height: 200px;
+   
+}
+
+
+
+.btn-user-plus{
+  font-size: 1.7rem;
+}
+
+
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+.searchButton {
+    color: white;
+    /* float: right; */
+    background: #e6e6e6;
+     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+     transition: 0.4s;
+}
+.searchInput {
+    border:none;
+    background: #e6e6e6;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    border-radius: 50px;
+
+}
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* .beeperNub {
+    right: 37px;
+}
+.beeperNub {
+    background-image: url(/rsrc.php/v3/yS/r/v_BCN1X0uyo.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -167px -251px;
+    height: 11px;
+    position: absolute;
+    top: -11px;
+    width: 20px;
+} */
+/* .triangle-up {
+position: absolute;
+width: 20px;
+height: 20px;
+top: -23px;
+right: 47%;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 20px solid #858282;
+display: flex;
+} */
+
+.options{
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
+    max-height: calc(58vh - 52px - 16px);
+    overflow:auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 2px;
+    transition: box-shadow 83ms;
+    padding: 8px 0 0;
+    width: 300px;
+    right: 0;
+    left: auto;
+    line-height: 1;
+    text-align: left;
+    position: absolute;
+    margin-top: 24px;
+    /* box-shadow: 2px 2px 2px #000; */
+    z-index: 1000;
+    list-style: none;
+}
+.settingBlock{
+    display: table;
+}
+.topcard-profil{
+    padding: 12px 12px 4px;
+}
+.photo-container{
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    margin: 0;
+    padding-right: 8px;
+    position: relative;
+}
+.photo-container img{
+    box-shadow: 0 2px 5px  #000;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 49.9%;
+    box-sizing: border-box;
+    background-clip: content-box;
+}
+.info-container {
+    word-break: break-word;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+}
+.info-container h3{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgba(0,0,0,.9);
+}
+.info-container h4{
+    font-size: 1.4rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    color: rgba(0,0,0,.6);
+}
+.artdeco-button{
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    padding: 0 8px;
+    
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    align-items: center;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: center;
+    max-width: 480px;
+    outline-width: 2px;
+    text-align: center;
+    transition-property: background-color,box-shadow,color;
+    font-size: 1.6rem;
+    min-height: 32px;
+    line-height: 20px;
+    padding: 6px 12px;
+    background-color: transparent;
+    color: #0073b1;
+    box-sizing: border-box;
+    font-family: inherit;
+    overflow: hidden;
+    transition-duration: 167ms;
+    vertical-align: middle;
+}
+
+.view-profile-Devinweb:hover{
+    text-decoration: none;
+}
+
+.view-profile-Devinweb .artdeco-button:hover{
+    color: #fca848;
+}
+.view-profile-Devinweb .photo-container img:hover{
+    box-shadow: 2px 2px 2px rgb(235, 146, 30);
+}
+.p-icon{
+    font-size: 1.1rem;
+}
+.btn-annuler{
+    margin-left:93%;
+}
+.topcard-options-list {
+    list-style: none;
+}
+.topcard-options-Logout{
+    padding: 18px 42px;
+    /* text-transform: uppercase; */
+    border-top: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    background: #f3f6f8;
+    margin-left: -42px;
+}
+.btn-floating-rec:hover{
+    text-decoration: none;
+}
+.btn-floating-rec span{
+    padding-left: 10px;
+}

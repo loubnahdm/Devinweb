@@ -1,6 +1,6 @@
-<template>
-
-      <section class="section-carousel container mt-5 pt-5 ">
+<template  >
+<div class="carousel-class mt-4">
+      <section class="section-carousel container mt-3 ">
           <div class="row ml-3">
                 <div class=" devin-goal col-lg-4 mt-5 pt-5 "> <blockquote> Devinweb met à votre disposition une plateforme de recrutement en ligne,
                                                                                 qui propose de porter le système de suivi des candidats au niveau supérieur
@@ -35,7 +35,7 @@
 
         </div>
       </section>
-   
+</div>
 </template>
 
 <script>
@@ -45,8 +45,6 @@ export default {
 </script>
 
 <style >
-
-
 
 
 
@@ -80,7 +78,17 @@ export default {
 
 }
 
-
+.carousel-class{
+  background-color: #ffffff;
+  margin-left: -110px;
+  padding-left: 110px;
+  margin-right: -110px;
+  padding-right: 110px;
+  margin-bottom: -300px;
+  padding-bottom: 350px;
+  border-top: #dbdbdb solid 1px;
+  border-bottom:  #dbdbdb  solid 1px;
+}
 
 
 
