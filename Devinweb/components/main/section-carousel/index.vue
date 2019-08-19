@@ -9,9 +9,8 @@
                                                                 </blockquote>
                 </div>
                 <div class="devin-slogan col-lg-8 mt-5">
-                <carousel :scrollPerPage="true" :controls='true' :autoplay='true' :perPage='1' autoplayTimeout='1000' paginationColor='grey' >
+                <!-- <carousel :scrollPerPage="true" :controls='true' :autoplay='true' :perPage='1' autoplayTimeout='1000' paginationColor='grey' >
                     <slide  data-index="0"  data-name="MySlideName">
-                        <!-- @slideclick="handleSlideClick" -->
                     <div class="carousel-item active ">
                         <img class="d-block w-100 " src="@/assets/IMG/image1.jpg" alt="image1">
                         <div class="carousel-caption d-none d-md-block mb-3 ">
@@ -29,7 +28,29 @@
                     </div>
                     </slide>
                 
-                </carousel>
+                </carousel> -->
+                 <b-carousel
+                      id="carousel-fade"
+                      style="text-shadow: 0px 0px 2px #000"
+                      fade
+                      indicators
+                      img-width="1024"
+                      img-height="480"
+                     
+                  >
+                      <b-carousel-slide 
+                      class="carousel-item active "
+                       img-src="@/assets/IMG/image1.jpg"
+                      >
+                        <h2 class="pb-5">Plus besoin de se déplacer pour passer les entretiens, postulez-vous et on vous convequera pour des entretiens en-ligne.</h2>
+                        </b-carousel-slide>
+                      <b-carousel-slide
+                       class="carousel-item  "
+                       img-src="@/assets/IMG/image2.jpg"
+                      >
+                      <h2 class="pb-5">Portail de recrutement qui vous permet de passer des entrentiens grace à votre webcam depuis chez-vous, à l'heure qui vous convient.</h2>
+                        </b-carousel-slide>
+                  </b-carousel>
 
                 </div>
 
@@ -40,7 +61,11 @@
 
 <script>
 export default {
-
+data(){
+  return{
+   
+  }
+}
 }
 </script>
 
@@ -53,10 +78,10 @@ export default {
   height: 380px;
   border-radius: 40px; 
 }
-
-.carousel-caption h1{
-  text-align:left;
+caption{
+  color: #ffffff;
 }
+
 .devin-goal{
   background-color: #c5c5c5;
   border:1px #b3b3b6 solid ;

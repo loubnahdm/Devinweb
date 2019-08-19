@@ -5,36 +5,37 @@
   <div class="container ">
     <div class="col-lg-7">
     <div class="row">
-    <div class="navbar-header col-lg-3 col-md-3">
+    <b-navbar-brand class="navbar-header ">
       <nuxt-link   to="/"   class="navbar-brand"> 
                <img  src="http://d2wwknes1cy3mz.cloudfront.net/public/logo-b.png" alt="Card image">
     </nuxt-link>
-    </div>
-    <form class="navbar-form  col-lg-6 col-md-6 navbar-right d-none d-lg-block" action="/action_page.php">
+    </b-navbar-brand>
+    
+    <b-nav-form class="navbar-form mt-2 col-lg-6 col-md-6 navbar-right d-none d-lg-block" action="/action_page.php">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Rechercher">
-          <div class="input-group-btn ">
-            <button class="btn btn-default " type="search">
+          <b-form-input type="text" class="form-control-header" placeholder="Rechercher"/>
+          <div class="input-group-header-btn ">
+            <b-button class="btn btn-default " type="search">
               <svg xmlns="http://www.w3.org/2000/svg" class="mb-4" viewBox="0 0 24 24"  width="24" height="24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
         
-            </button>
+            </b-button>
           </div>
         </div>
-    </form>
+    </b-nav-form>
     </div>
     </div>
    <div class="col-lg-5">
-    <ul class="nav navbar-nav row">
-      <li class="active">
+    <b-nav fill justified class="nav navbar-nav row">
+      <b-nav-item active>
               <nuxt-link class="nav-link-1 " :to="{path:'/',hash:'ancre'}" >
                  <span >ESPACE CANDIDAT</span>
-              </nuxt-link>  </li>     
-      <li>
+              </nuxt-link>  </b-nav-item>     
+      <b-nav-item>
               <nuxt-link class="nav-link-2 " to="Login_recruteur">
                   <span >ESPACE RECRUTEUR</span>
               </nuxt-link>
-      </li>
-    </ul>
+      </b-nav-item>
+    </b-nav>
    </div>
   </div>
 </nav>
@@ -65,7 +66,6 @@ export default {
 
 .navbar{
   
-  display: block;
   background:#fafafa;
   position: fixed;
   width: 100%;
@@ -80,10 +80,7 @@ export default {
 }
 
 
-/* .row{
-  display: flex;
-  margin-left: 7%;
-} */
+
 
 .navbar-header .navbar-brand img{
    height: auto;
@@ -91,15 +88,10 @@ export default {
     cursor: pointer;
     display:flex;
 }
-/*
-.container-fluid{
-  background: springgreen;
-  
 
-}*/
 .navbar-nav {
  flex-direction: row;
- /* margin-right: 9%; */
+
 
   
 }
@@ -113,7 +105,7 @@ li a {
   text-decoration: none; 
 }
 .nav-link-1{
- height: 32px;
+
  display: inline-block;
  padding:0.2em 1.45em;
  margin:0.2em;
@@ -152,7 +144,7 @@ li a {
  text-align:center;
  transition: all 0.2s;
  background:  #00B4CC;
- height:32px;
+
  
 }
 .nav-link-2:hover{
@@ -183,7 +175,7 @@ li a {
   font-size: 20px;
   
 }
-.form-control{
+.form-control-header{
    
   border: 3px solid #00B4CC;
   background: #f1f5f8;
@@ -194,7 +186,7 @@ li a {
   outline: none;
   color: #9DBFAF;
 }
-.form-control:focus{
+.form-control-header:focus{
   color: #00B4CC;
 }
 

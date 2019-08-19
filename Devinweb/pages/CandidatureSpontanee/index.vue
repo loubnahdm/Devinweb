@@ -3,7 +3,7 @@
     <section class="candidature_sp">
     <h2 class="text-center "><font-awesome-icon :icon="['fas', 'envelope']"/>   Сandidature spontanée</h2>
     <hr style="padding-bottom:2%;">
-    <form name="candidatform" id="candidatform" action="https://www.eotim.com/backend/backend_form/receiveform/" method="post" enctype="multipart/form-data">
+    <form name="candidatform" id="candidatform" class="candidatform m-5 p-5" action="." method="post" enctype="multipart/form-data">
          <p class="clearfix">
                  <label for="Nom">Nom <b>*</b> : </label>
                  <input class="input" id="Nom" name="lastname" value="" type="text">
@@ -526,7 +526,7 @@
              <input type="hidden" name="formPageId" value="76">
              <input type="hidden" name="uploadLimitSize" value="10">
              <input type="hidden" name="form-referer" value="">
-             <input type="submit" name="submit" value="Envoyer" class="btn-envoyer">
+             <input type="submit" value="Envoyer" id="btn-envoyer">
     </form>
     </section>
 </div>
@@ -539,6 +539,11 @@ layout: 'default',
 </script>
 
 <style>
+.candidatform{
+     box-shadow: 1px 2px 4px rgb(110, 110, 110);
+     background-color: rgb(224, 224, 224);
+
+}
 @media all and (min-width:1200px ){
 .candidature_sp{
     margin-top: 5%; 
@@ -604,7 +609,7 @@ layout: 'default',
     border: 0;
     padding: 0;
     width: auto;
-    background-color: #f6f6f6;
+    background-color: rgb(224, 224, 224);
 }
 .clearfix textarea {
     padding: .5em;
@@ -668,7 +673,7 @@ layout: 'default',
 *, *:before, *:after {
     box-sizing: border-box;
 } 
-.btn-envoyer{
+#btn-envoyer{
     float: right;
     background: #6bacc5;
     font-family: 'Open Sans',sans-serif;
@@ -681,7 +686,7 @@ layout: 'default',
     text-align: center;
     color: #fff;
 }
-.btn-envoyer:hover{
+#btn-envoyer:hover{
     color: #2c333a;
     border-color: #116d74;
     background-color: #46e4f0;

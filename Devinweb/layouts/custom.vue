@@ -2,14 +2,14 @@
 <div>
     <HeaderRec/>
     <div class="container-fluid" id="main-rec">
-        <Recruteur/>
+        <nuxt/>
     </div>
     <FooterRec/>
 </div>
 </template>
 
 <script>
-import HeaderRec from '~/components/headerRecruteur';
+import HeaderRec from '~/components/HeaderRec';
 import FooterRec from '~/components/footerRecruteur';
 import Recruteur from '~/pages/Espace-Recruteur';
 export default {

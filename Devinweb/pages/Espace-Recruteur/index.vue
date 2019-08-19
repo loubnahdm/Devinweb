@@ -5,12 +5,12 @@
     <section  class="row top-tof-profil pl-0 pr-5">
 
         <div class="div-tof  col-lg-10  mt-5">
-            <div id="tof" ></div>
+            <div id="tof" class="container  d-none d-md-block" ></div>
         </div>
     
        <div class="row top-header-profil ">
            <div  class="col-lg-3">
-               <img src="~assets/IMG/logo.jpg"   alt="card image"/>
+               <b-img src="~assets/IMG/logo.jpg"   alt="card image" thumbnail fluid/>
            </div>
            <div class="devin-name col-lg-5 mt-3 pl-5">
                <span>Devinweb</span>
@@ -60,7 +60,6 @@
     </section>
     
 </div>
-   
 </div>  
 </template>
 
@@ -68,16 +67,7 @@
 
 export default {
 layout:'custom',
-// data(){return{
-//     showbar:false,
-// }},
-// created(){
-// this.$bus.$on('i-got-clicked',SHW=>{
-//     console.log(`Oh, that's nice. It's gotten ${SHW} clicks! :)`);
-//     // this.showbar=show;
-//     document.getElementById()
-// });
-// }
+
 }
 
 </script>
@@ -173,6 +163,7 @@ box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
 }
 .devin-result .row .col-md-4{
     border-right: 1px gray solid ;
+     
 
 }
 </style>

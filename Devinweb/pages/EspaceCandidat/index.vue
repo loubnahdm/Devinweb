@@ -55,7 +55,7 @@
                             </span>
                             <span class="grid_11">En cochant cette case, j’accepte que mes coordonnées, mon CV, mes critères de recherche et les autres informations que je communique soient traitées et conservées par Devinweb, dans le but de me proposer des offres d’emploi et de stage correspondant à mes critères de recherche</span>
                         </p>
-                        <input type="submit" name="saveMembership" id="saveMembership" value="S'enregistrer" class="btn">
+                        <input type="submit" name="saveMembership" id="saveMembership" value="S'enregistrer" >
                     </form>
 
 
@@ -228,7 +228,7 @@ label.required:after {
     width:15px;
     
 }
-.btn{
+#saveMembership{
     float: right;
     background: #6bacc5;
     font-family: 'Open Sans',sans-serif;
@@ -241,7 +241,7 @@ label.required:after {
     text-align: center;
     color: #fff;
 }
-.btn:hover{
+#saveMembership:hover{
     color: #2c333a;
     border-color: #116d74;
     background-color: #46e4f0;
