@@ -1,4 +1,4 @@
-# skupe_interview
+# skype_interview
 
 > My breathtaking Nuxt.js project
 
