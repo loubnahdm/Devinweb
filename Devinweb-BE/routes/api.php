@@ -36,20 +36,25 @@ Route::group(['middleware' => 'jwt.auth'], function () {
 });
 
 
-Route::get('projs', 'ProjController@index');
-Route::get('projs/{projet}', 'ProjController@show');
-Route::post('projs', 'ProjController@store');
-Route::put('projs/{projet}', 'ProjController@update');
-Route::delete('projs/{projet}', 'ProjController@destroy');
+
+Route::get('offres', 'OffreController@index');
+Route::get('offres/{projet}', 'OffreController@show');
+Route::post('offres', 'OffreController@store');
+Route::put('offres/{projet}', 'OffreController@update');
+Route::delete('offres/{projet}', 'OffreController@destroy');
 
 
-Route::get('cands', 'CandidatController@index');
-Route::get('cands/{candidat}', 'CandidatController@show');
-Route::post('cands', 'CandidatController@store');
-Route::put('cands/{candidat}', 'CandidatController@update');
-Route::delete('cands/{candidat}', 'CandidatController@destroy');
+// Route::get('cands', 'CandidatController@index');
+// Route::get('cands/{candidat}', 'CandidatController@show');
+// Route::post('cands', 'CandidatController@store');
+// Route::put('cands/{candidat}', 'CandidatController@update');
+// Route::delete('cands/{candidat}', 'CandidatController@destroy');
 
-
+Route::get('cands', 'CandidatureController@index');
+Route::get('cands/{candidature}', 'CandidatureController@show');
+Route::post('cands', 'CandidatureController@store');
+Route::put('cands/{candidature}', 'CandidatureController@update');
+Route::delete('cands/{candidature}', 'CandidatureController@destroy');
 
 // comments
 Route::post('/comments','CommentsController@store');

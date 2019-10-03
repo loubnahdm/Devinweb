@@ -1,21 +1,24 @@
 <?php
 
+// namespace App\Http\Controllers;
+
+
 namespace App\Http\Controllers\api;
 
-use App\Proj;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
-class ProjController extends Controller
+use App\Candidature; 
+class CandidatureController extends Controller
 {
-    /**
+    
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Proj::all();
+        return Candidature::all();
     }
 
     /**
@@ -36,33 +39,33 @@ class ProjController extends Controller
      */
     public function store(Request $request)
     {
-        $article = Proj::create($request->all());
+        $candidature = Candidature::create($request->all());
 
-        return response()->json($article, 201);
+        return response()->json($candidature, 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Proj  $proj
+     * @param  \App\Candidature  $candidature
      * @return \Illuminate\Http\Response
      */
-    public function show(Proj $proj,$id)
+    public function show($id)
     {
-        $proj = Proj::find($id);
+        $candidature = Candidature::find($id);
         return response()->json([
             'success' => true,
-            'data' => $proj
+            'data' => $candidature
         ], 200);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Proj  $proj
+     * @param  \App\Candidature  $candidature
      * @return \Illuminate\Http\Response
      */
-    public function edit(Proj $proj)
+    public function edit(Candidature $candidature)
     {
         //
     }
@@ -71,31 +74,31 @@ class ProjController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Proj  $proj
+     * @param  \App\Candidature  $candidature
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Proj $proj,$id)
+    public function update(Request $request, Candidature $candidature,$id)
     {
-        $proj = Proj::find($id);
-        $proj->update($request->all());
+        $candidature = Candidature::find($id);
+        $candidature->update($request->all());
 
-        return response()->json($proj, 200);
+        return response()->json($candidature, 200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Proj  $proj
+     * @param  \App\Candidature  $candidature
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Proj $proj,$id)
+    public function destroy(Candidature $candidature,$id)
     {
-        $proj = Proj::find($id);
-        $proj->delete();
+        $candidature = Candidature::find($id);
+        $candidature->delete();
 
         return response()->json([
             'success' => 'true',
-            'projet'  => $proj,
+            'projet'  => $candidature,
             'msg'     =>'the data has been removed'
             
         ],204);

@@ -2,7 +2,7 @@
 <b-container class="bv-example-row bv-example-row-flex-cols mt-5">
    <b-row>
     <b-col cols="7" class="container mb-5">
-        <h1 class="grid_12 text-left offer-title" role="heading">{{$store.state.Projets.projet.title}}</h1>
+        <h1 class="grid_12 text-left offer-title" role="heading">{{this.$store.state.Projets.projet.title}}</h1>
     </b-col>
    
     <b-col cols="2">
@@ -92,7 +92,7 @@ export default {
   data(){
      return{
         show:false,
-      
+       
      }
   },
   methods:{
@@ -103,11 +103,12 @@ export default {
         }
      }
   },
-   //  mounted(){
-   //   this.$bus.$on('show_Detail',name=>{
-   //       console.log(name);       
-   //        });
-   //       }
+ async fetch({store}) {
+  await store.dispatch("Projets/getProjets")
+  
+},
+  
+   
 
 }
 </script>

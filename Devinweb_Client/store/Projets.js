@@ -6,7 +6,8 @@ Vue.use(Vuex);
 
 export const state = () => ({
   projets:[],
-  projet:null
+  projet:null,
+ 
  
   })
  export const  getters= { 
@@ -20,15 +21,14 @@ export const mutations = {
   SET_CURRENT_PROJET(state,DATA_PROJET){
     state.projet=DATA_PROJET
   },
- 
- 
+  
 
   
 
   }
 export const actions = {
   async getProjets ({ commit }) {
-    const proj=await this.$axios.$get('http://127.0.0.1:8000/api/projs');
+    const proj=await this.$axios.$get('http://127.0.0.1:8000/api/offres');
     commit('SET_PROJET', proj);  
   },
 
@@ -46,8 +46,17 @@ export const actions = {
   // },
   
   async getProjet_By_ID ({ commit },id) {
-    const proj_ID=await this.$axios.$get('http://127.0.0.1:8000/api/projs/'+id);
-    commit('SET_CURRENT_PROJET', proj_ID.data);  
+    const proj_ID=await this.$axios.$get('http://127.0.0.1:8000/api/offres/'+id);
+    commit('SET_CURRENT_PROJET', proj_ID.data); 
+    console.log(id);
+    
+   console.log(proj_ID);
+   
   },
+  async deleteProjet({commit},id){
+    await this.$axios.$delete('http://127.0.0.1:8000/api/offres/'+id);
+    window.location.href='/Missions';
+  },
+ 
 }
   

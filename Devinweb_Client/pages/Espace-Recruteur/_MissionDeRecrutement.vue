@@ -74,7 +74,7 @@
                 placeholder="Description Contexte"
                 rows="3"
                 max-rows="8"
-                v-model="description"
+                v-model="description_Contexte"
                    required
             ></b-form-textarea>
             </b-col>
@@ -89,8 +89,10 @@
             <b-form-textarea
                 id="textarea-auto-height"
                 placeholder="Description Profil"
+                v-model="description_Profil"
                 rows="3"
                 max-rows="8"
+                  required
             ></b-form-textarea>
             </b-col>
         </b-row>
@@ -122,7 +124,8 @@ export default {
         ],
       
         selected: 'stage',
-        description:'',
+        description_Contexte:'',
+        description_Profil:'',
         title:'',
         fonction:'',
         level_of_study:'',
@@ -142,9 +145,10 @@ export default {
             experience:this.experience,
             salary:this.salary, 
             title:this.title,
-            description:this.description
+           description_Contexte:this.description_Contexte,
+           description_Profil:this.description_Profil
           }
-          await this.$axios.$post('http://127.0.0.1:8000/api/projs',p)
+          await this.$axios.$post('http://127.0.0.1:8000/api/offres',p)
           
       }
   }

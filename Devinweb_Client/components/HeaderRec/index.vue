@@ -65,10 +65,10 @@
 
           </b-dropdown-item>
           <hr class="dropdown-divider">
-          <b-dropdown-item has-link aria-role="menuitem" class="btn-floating-rec btn-briefcase pr-2 " to="/Espace-Recruteur/:MissionDeRecrutement" >
+          <b-dropdown-item has-link aria-role="menuitem" class="btn-floating-rec btn-briefcase pr-2 " to="/Missions" >
                          <span  class="p-icon">
                                 <font-awesome-icon :icon="['fas', 'briefcase']"/>
-                                <span>Mission de Recrutement</span>
+                                <span>Missions de Recrutement</span>
                            
                         </span>
           </b-dropdown-item>

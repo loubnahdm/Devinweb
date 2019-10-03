@@ -1,0 +1,29 @@
+{
+  "name": "DevinwebEntretien",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.11.1",
+    "@fortawesome/free-solid-svg-icons": "^5.11.1",
+    "@nuxtjs/auth": "^4.8.4",
+    "@nuxtjs/axios": "^5.6.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "jquery": "^3.4.1",
+    "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "popper.js": "^1.15.0",
+    "vue-carousel": "^0.18.0",
+    "vue-notification-bell": "^0.8.14",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {}
+}

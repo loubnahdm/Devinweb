@@ -1,21 +1,25 @@
 <?php
 
+
 namespace App\Http\Controllers\api;
 
+use App\Offre;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Candidat; 
 
-class CandidatController extends Controller
+
+
+class OffreController extends Controller
 {
-     /**
+    
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Candidat::all();
+        return Offre::all();
     }
 
     /**
@@ -36,33 +40,33 @@ class CandidatController extends Controller
      */
     public function store(Request $request)
     {
-        $candidat = Candidat::create($request->all());
+        $article = Offre::create($request->all());
 
-        return response()->json($candidat, 201);
+        return response()->json($article, 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Candidat  $candidat
+     * @param  \App\Offre  $offre
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Offre $offre,$id)
     {
-        $candidat = Candidat::find($id);
+        $offre = Offre::find($id);
         return response()->json([
             'success' => true,
-            'data' => $candidat
+            'data' => $offre
         ], 200);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Candidat  $candidat
+     * @param  \App\Offre  $offre
      * @return \Illuminate\Http\Response
      */
-    public function edit(Candidat $candidat)
+    public function edit(Offre $offre)
     {
         //
     }
@@ -71,33 +75,34 @@ class CandidatController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Candidat  $candidat
+     * @param  \App\Offre  $offre
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Candidat $candidat,$id)
+    public function update(Request $request,$id, Offre $offre)
     {
-        $candidat = Candidat::find($id);
-        $candidat->update($request->all());
+        $offre = Offre::find($id);
+        $offre->update($request->all());
 
-        return response()->json($candidat, 200);
+        return response()->json($offre, 200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Candidat  $candidat
+     * @param  \App\Offre  $offre
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Candidat $candidat,$id)
+    public function destroy(Offre $offre,$id)
     {
-        $candidat = Candidat::find($id);
-        $candidat->delete();
+        $offre = Offre::find($id);
+        $offre->delete();
 
         return response()->json([
             'success' => 'true',
-            'projet'  => $candidat,
+            'projet'  => $offre,
             'msg'     =>'the data has been removed'
             
         ],204);
     }
+    
 }

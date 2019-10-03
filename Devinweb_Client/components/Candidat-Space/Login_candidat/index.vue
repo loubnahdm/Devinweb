@@ -58,8 +58,11 @@ export default {
     	// }
    
     const api=await this.$axios.post('/candauth/login',this.form);
+    if(api.data.success){
+      console.log(api.data.success);
+    }
 
-    console.log(api.data.success);
+   
      
      }
  }

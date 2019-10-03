@@ -114,7 +114,7 @@ class PlusController extends Controller
                 return response()->json([
                     'success' => true,
                     'email' => $request->email,
-                    'password' => $request->password
+                    // 'password' => $request->password
                 ], 200);
         }
         else{
@@ -124,8 +124,7 @@ class PlusController extends Controller
                     'email' => [
                         "Invalid email address or password"
                     ]
-                ]
-            ], 422);
+                ] ]);
         }
        
     }
