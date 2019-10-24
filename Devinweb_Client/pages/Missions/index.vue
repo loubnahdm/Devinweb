@@ -128,10 +128,10 @@
                     
 
                 <template v-slot:cell(status)="row">
-                    <b-button size="sm" @click="info(row.item, $event.target)" class="mr-1" variant="warning">
+                    <b-button size="sm" @click="info(row.item, $event.target)" class="" variant="warning">
                     Modifier
                     </b-button>
-                    <b-button size="sm" @click="supprimer(row.item, $event.target)" class="mr-1" variant="danger">
+                    <b-button size="sm" @click="supprimer(row.item, $event.target)" class="" variant="danger">
                     Supprimer
                     </b-button>
                 

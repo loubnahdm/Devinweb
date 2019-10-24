@@ -216,6 +216,10 @@ methods:{
 
 
 }
+.btn-show a:hover {
+    color: #fa0000;
+    /* text-decoration: underline; */
+}
 </style>
 
 

@@ -24,11 +24,10 @@
               
               <h2 class="mt-0 media-title">Contexte</h2>
               <b-row class="media-data">
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem voluptatibus est totam ipsa et sint eligendi sit quod 
-                 incidunt nulla tempora, cumque quidem, illo harum nihil ipsum ex tempore? Ea!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui iure sint veritatis excepturi expedita deleniti a et consectetur,
-                   eum sunt tempore minus magni dolorem dolore quam enim perspiciatis cumque ratione?</p> 
-              </b-row>
+               <p>
+                  {{$store.state.Projets.projet.description_Contexte}}
+               </p>
+               </b-row>
              </b-media>
           </b-row>
           <b-row>   
@@ -38,7 +37,7 @@
                     <h2 class="mt-0 media-title">Profil requis</h2>
                     <b-row class="media-data">
                      <p>
-                        {{$store.state.Projets.projet.description}}
+                        {{$store.state.Projets.projet.description_Profil}}
                      </p>
                      </b-row>
                    </b-media>

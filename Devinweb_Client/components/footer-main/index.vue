@@ -14,10 +14,14 @@
 
                   <!-- Content -->
                   <h5 class="font-weight-bold text-uppercase mb-4">ABOUT US</h5>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum pariatur.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
-                    esse
-                    quasi, veritatis totam voluptas nostrum.</p>
+                  <p>
+                        Devinweb est une société et agence web qui offre des
+                        services de développement informatique agile, 
+                        web, mobile et ingénierie de logiciels informatiques.
+                        Ainsi, que les sites et plateforme e-commerce.
+                          - Nos consultants sont principalement opérants au Maroc sur Tanger,
+                        Tétouan, Casa, Rabat.. et en France sur Paris.
+                  </p>
 
                 </div>
                 <!-- Grid column -->
@@ -147,7 +151,10 @@ export default {
     font-size: 1.5rem;
 
 }
-
+.social-link a:hover {
+    color: #fa0000;
+    /* text-decoration: underline; */
+}
 
 .col-md-2{
    align-items: center;
