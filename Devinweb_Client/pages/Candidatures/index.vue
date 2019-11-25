@@ -85,7 +85,20 @@
                 >
                 
             
+                   <template v-slot:cell(examiner)="row">
+                    <b-button size="sm" @click="info(row.item, $event.target)" class="" variant="success">
+                      Accepter
+                    </b-button>
+                    <b-button size="sm" @click="supprimer(row.item, $event.target)" class="" variant="danger">
+                      Refuser
+                    </b-button>
+                   
+                     <b-button size="sm mt-2 mb-2" @click="planifier(row.item, $event.target)" class="" variant="warning">
+                     Planifier pour l'entretien
+                    </b-button>
+                    
                 
+                </template>
                 
                 </b-table>
                
@@ -110,7 +123,11 @@ layout:'custom',
       return {
         perPage: 3,
         currentPage: 1,
-        fields: [{key:'id',sortable: true},{key:'first_name',sortable: true},{key:'last_name',sortable: true},{key:'email',sortable: true},{key:'telephone',sortable: true},{key:'cv',sortable: true},{key:'motivation',sortable: true},{key:'created_at',sortable: true},{key:'updated_at',sortable: true},{key:'Status',variant:'primary',sortable: true}],
+        fields: [{key:'id',sortable: true},{key:'first_name',sortable: true},
+        {key:'last_name',sortable: true}, {key:'email',sortable: true},
+        {key:'telephone',sortable: true},{key:'cv',sortable: true},
+        {key:'motivation',sortable: true},{key:'Status',variant:'primary',sortable: true},
+        {key:'examiner',label:'Examiner Candidature',variant:'danger'}],
 
         items: [],
        
@@ -124,7 +141,7 @@ layout:'custom',
     },
      mounted() {
       // Set the initial number of items
-      this.rows = this.items.length
+      // this.rows = this.items.length
       this.items=this.$store.state.Candidature.candidatures;
     },
     computed: {
@@ -145,8 +162,21 @@ layout:'custom',
       
       onFiltered(filteredItems) {
         // Trigger pagination to update the number of buttons/pages due to filtering
-        this.rows = filteredItems.length
+        this.totalRows  = filteredItems.length
         this.currentPage = 1
+      }
+      ,
+      planifier(item,button){
+        // console.log("succes");
+         this.$router.push({
+            path: '/PlanifierPourEntretien'
+       });
+      
+      // window.location.href="/PlanifierPourEntretien";
+
+
+
+        
       }
     },
     async fetch({store}) {

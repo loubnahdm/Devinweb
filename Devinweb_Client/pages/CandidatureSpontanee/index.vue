@@ -511,7 +511,7 @@
              <b-col class="clearfix">
                      <label>Votre CV <b>**</b> : </label>
                      <b-form-file type="file" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.docx, docx" 
-                     id="NomFichier" name="Fichier" required v-model="cv"  plain></b-form-file>
+                     id="NomFichier" name="Fichier"  v-model="cv"  plain></b-form-file>
                         
              </b-col>
              <b-col class="clearfix">
